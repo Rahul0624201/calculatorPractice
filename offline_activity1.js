@@ -70,13 +70,28 @@ function power() {
     }
     function power2() {
         var num = parseFloat(document.frmCalc.txtNumber.value);
-            if (!(isNaN(num))) {
-                num=num**2;
-                document.frmCalc.txtnumber.value = num;
-                
-            }
+        if (!isNaN(num)) {
+            num = num ** 2;
+            document.frmCalc.txtNumber.value = num;
+        }
     }
-
+    
+    function Round() {
+        var num = parseFloat(document.frmCalc.txtNumber.value);
+        if (!isNaN(num)) {
+            num = Math.round(num);
+            document.frmCalc.txtNumber.value = num;
+        }
+    }
+    
+    function Floor() {
+        var num = parseFloat(document.frmCalc.txtNumber.value);
+        if (!isNaN(num)) {
+            num = Math.floor(num);
+            document.frmCalc.txtNumber.value = num;
+        }
+    }
+    
 //The following function is called when "Calculate" button is clicked.
 //Note that this function is dependent on the value of global variable.        
 function calculate() {
